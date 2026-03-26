@@ -15,5 +15,6 @@
 
 - Le lien de votre site hébergé
 - Le lien de votre maquette figma
+- Le lien de votre repo git
 
 -`Ajouter le fichier 'lien.txt' à ce repo`
