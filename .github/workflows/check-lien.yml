@@ -1,0 +1,23 @@
+name: Vérifier lien.txt
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  check-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Vérifier la présence de lien.txt
+        run: |
+          if [ -f "lien.txt" ]; then
+            echo "Le fichier lien.txt existe."
+          else
+            echo "Le fichier lien.txt est introuvable."
+            exit 1
+          fi
